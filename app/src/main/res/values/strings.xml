@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">LionZXYs Util</string>
+
+    <string name="main_btn_1">Generate IP</string>
+    <string name="generateIPDialog">Click on button for generation random site</string>
+    <string name="generateIPButton">Get Random Ip</string>
+
+    <string name="maxThread">Max Thread</string>
+    <string name="maxThreadDiscr">Change the value to more productive</string>
+
+    <string name="timeout">Site Timeout</string>
+    <string name="timeoutDiscr">How long wait site answer.</string>
+
+    <string name="menuCheckUpdate">Check Update</string>
+    <string name="settings">Settings</string>
+</resources>
