@@ -13,10 +13,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activitys.MyPreferenceActivity">
-        </activity>
-        <activity android:name=".activitys.GenerateIpAcitivy">
-        </activity>
+        <activity android:name=".generateip.activitys.MyPreferenceActivity"/>
+        <activity android:name=".generateip.activitys.GenerateIpAcitivy"/>
+        <activity android:name=".vkvideo.VideoActivity"/>
+        <activity android:name=".vkvideo.VKLoginActivity"/>
     </application>
 
 </manifest>

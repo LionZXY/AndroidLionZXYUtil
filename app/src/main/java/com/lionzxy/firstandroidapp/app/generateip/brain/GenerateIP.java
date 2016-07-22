@@ -1,21 +1,15 @@
-package com.lionzxy.firstandroidapp.app.brain;
+package com.lionzxy.firstandroidapp.app.generateip.brain;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.preference.PreferenceManager;
 import android.widget.Toast;
-import com.lionzxy.firstandroidapp.app.activitys.GenerateIpAcitivy;
-import com.lionzxy.firstandroidapp.app.activitys.MyPreferenceActivity;
-import com.lionzxy.firstandroidapp.app.enums.GenerateIpStep;
+import com.lionzxy.firstandroidapp.app.generateip.activitys.GenerateIpAcitivy;
+import com.lionzxy.firstandroidapp.app.generateip.enums.GenerateIpStep;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Random;

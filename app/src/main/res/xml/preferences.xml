@@ -3,14 +3,14 @@
     <PreferenceCategory
             android:title="@string/main_btn_1"
             android:key="generateIPSetting">
-        <com.lionzxy.firstandroidapp.app.brain.IntEditTextPreference
+        <com.lionzxy.firstandroidapp.app.generateip.brain.IntEditTextPreference
                 android:key="timeout"
                 android:title="@string/timeout"
                 android:summary="@string/timeoutDiscr"
                 android:numeric="integer"
                 android:maxLength="10"
         />
-        <com.lionzxy.firstandroidapp.app.brain.IntEditTextPreference
+        <com.lionzxy.firstandroidapp.app.generateip.brain.IntEditTextPreference
                 android:key="maxThread"
                 android:title="@string/maxThread"
                 android:summary="@string/maxThreadDiscr"

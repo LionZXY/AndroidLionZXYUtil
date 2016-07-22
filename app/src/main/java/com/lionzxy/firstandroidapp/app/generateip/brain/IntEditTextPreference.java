@@ -1,4 +1,4 @@
-package com.lionzxy.firstandroidapp.app.brain;
+package com.lionzxy.firstandroidapp.app.generateip.brain;
 
 import android.content.Context;
 import android.preference.EditTextPreference;

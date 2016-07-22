@@ -9,4 +9,11 @@
             android:layout_height="wrap_content"
             android:text="@string/main_btn_1"
             android:id="@+id/main_generateIP" android:layout_gravity="center_horizontal" android:layout_weight="0.12"/>
+
+    <Button
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:text="@string/main_btn_2"
+        android:id="@+id/main_generateLinkVK" android:layout_gravity="center_horizontal" android:layout_weight="0.12"/>
+
 </LinearLayout>

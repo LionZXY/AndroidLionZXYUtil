@@ -2,6 +2,7 @@
     <string name="app_name">LionZXYs Util</string>
 
     <string name="main_btn_1">Generate IP</string>
+    <string name="main_btn_2">Generate Video Link</string>
     <string name="generateIPDialog">Click on button for generation random site</string>
     <string name="generateIPButton">Get Random Ip</string>
 
@@ -13,4 +14,6 @@
 
     <string name="menuCheckUpdate">Check Update</string>
     <string name="settings">Settings</string>
+    <string name="security">Если вы не доверяете этому приложению, можете просто ввести токен:</string>
+    <string name="logout_vk">LogOut VK</string>
 </resources>

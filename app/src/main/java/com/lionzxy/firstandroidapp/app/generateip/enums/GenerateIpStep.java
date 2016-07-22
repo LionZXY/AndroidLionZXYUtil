@@ -1,4 +1,4 @@
-package com.lionzxy.firstandroidapp.app.enums;
+package com.lionzxy.firstandroidapp.app.generateip.enums;
 
 /**
  * com.lionzxy.firstandroidapp.app.enums

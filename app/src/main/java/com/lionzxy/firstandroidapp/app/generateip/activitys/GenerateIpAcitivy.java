@@ -1,4 +1,4 @@
-package com.lionzxy.firstandroidapp.app.activitys;
+package com.lionzxy.firstandroidapp.app.generateip.activitys;
 
 
 import android.content.Intent;
@@ -9,8 +9,8 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.*;
 import com.lionzxy.firstandroidapp.app.R;
-import com.lionzxy.firstandroidapp.app.brain.GenerateIP;
-import com.lionzxy.firstandroidapp.app.enums.GenerateIpStep;
+import com.lionzxy.firstandroidapp.app.generateip.brain.GenerateIP;
+import com.lionzxy.firstandroidapp.app.generateip.enums.GenerateIpStep;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,10 +1,9 @@
-package com.lionzxy.firstandroidapp.app.activitys;
+package com.lionzxy.firstandroidapp.app.generateip.activitys;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
-import android.preference.PreferenceManager;
+
 import com.lionzxy.firstandroidapp.app.R;
 
 
