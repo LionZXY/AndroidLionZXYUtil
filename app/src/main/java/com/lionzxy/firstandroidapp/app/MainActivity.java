@@ -7,7 +7,8 @@ import android.widget.Button;
 
 import com.lionzxy.firstandroidapp.app.generateip.activitys.BaseActivity;
 import com.lionzxy.firstandroidapp.app.generateip.activitys.GenerateIpAcitivy;
-import com.lionzxy.firstandroidapp.app.vkvideo.VideoActivity;
+import com.lionzxy.firstandroidapp.app.vk.graffiti.GraffitiUploadActivity;
+import com.lionzxy.firstandroidapp.app.vk.video.VideoActivity;
 
 
 /**
@@ -36,6 +37,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             }
             case R.id.main_generateLinkVK: {
                 Intent i = new Intent(this, VideoActivity.class);
+                startActivity(i);
+                return;
+            }
+            case R.id.main_uploadGraffiti: {
+                Intent i = new Intent(this, GraffitiUploadActivity.class);
                 startActivity(i);
                 return;
             }

@@ -1,4 +1,4 @@
-package com.lionzxy.firstandroidapp.app.vkvideo;
+package com.lionzxy.firstandroidapp.app.vk.video;
 
 import android.content.Intent;
 import android.os.Bundle;

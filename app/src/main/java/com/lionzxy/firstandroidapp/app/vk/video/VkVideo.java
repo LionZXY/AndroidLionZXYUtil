@@ -1,22 +1,16 @@
-package com.lionzxy.firstandroidapp.app.vkvideo;
+package com.lionzxy.firstandroidapp.app.vk.video;
 
-import android.support.annotation.Nullable;
-
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.InputStreamReader;
-import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 
 /**

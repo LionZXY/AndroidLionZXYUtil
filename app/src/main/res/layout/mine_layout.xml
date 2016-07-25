@@ -1,19 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent" android:weightSum="1" android:id="@+id/lionZXYLayout">
+    android:id="@+id/lionZXYLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
 
     <Button
-            android:layout_width="391dp"
-            android:layout_height="wrap_content"
-            android:text="@string/main_btn_1"
-            android:id="@+id/main_generateIP" android:layout_gravity="center_horizontal" android:layout_weight="0.12"/>
-
-    <Button
+        android:id="@+id/main_generateIP"
         android:layout_width="391dp"
         android:layout_height="wrap_content"
-        android:text="@string/main_btn_2"
-        android:id="@+id/main_generateLinkVK" android:layout_gravity="center_horizontal" android:layout_weight="0.12"/>
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.12"
+        android:text="@string/main_btn_1" />
+
+    <Button
+        android:id="@+id/main_generateLinkVK"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.12"
+        android:text="@string/main_btn_2" />
+
+    <Button
+        android:id="@+id/main_uploadGraffiti"
+        android:layout_width="391dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.12"
+        android:text="Upload graffiti"
+        android:onClick="onClick" />
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.lionzxy.firstandroidapp.app.vkvideo;
+package com.lionzxy.firstandroidapp.app.vk.video;
 
 /**
  * Created by Никита on 08.05.2016.
