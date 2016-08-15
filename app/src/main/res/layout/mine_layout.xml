@@ -2,33 +2,51 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/lionZXYLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="1">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/main_generateIP"
-        android:layout_width="391dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.12"
-        android:text="@string/main_btn_1" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/main_generateLinkVK"
-        android:layout_width="391dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.12"
-        android:text="@string/main_btn_2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:weightSum="1"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/main_uploadGraffiti"
-        android:layout_width="391dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.12"
-        android:text="Upload graffiti"
-        android:onClick="onClick" />
+            <Button
+                android:id="@+id/main_generateIP"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/main_btn_1" />
+
+            <Button
+                android:id="@+id/main_generateLinkVK"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.12"
+                android:text="@string/main_btn_2" />
+
+            <Button
+                android:id="@+id/main_uploadGraffiti"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.12"
+                android:onClick="onClick"
+                android:text="Upload graffiti" />
+
+            <Button
+                android:id="@+id/main_downloadMusic"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.12"
+                android:onClick="onClick"
+                android:text="Download VK Music" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

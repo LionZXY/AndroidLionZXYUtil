@@ -8,6 +8,7 @@ import android.widget.Button;
 import com.lionzxy.firstandroidapp.app.generateip.activitys.BaseActivity;
 import com.lionzxy.firstandroidapp.app.generateip.activitys.GenerateIpAcitivy;
 import com.lionzxy.firstandroidapp.app.vk.graffiti.GraffitiUploadActivity;
+import com.lionzxy.firstandroidapp.app.vk.music.MusicActivity;
 import com.lionzxy.firstandroidapp.app.vk.video.VideoActivity;
 
 
@@ -17,7 +18,6 @@ import com.lionzxy.firstandroidapp.app.vk.video.VideoActivity;
  * FirstAndroidApp
  */
 public class MainActivity extends BaseActivity implements View.OnClickListener {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +42,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             }
             case R.id.main_uploadGraffiti: {
                 Intent i = new Intent(this, GraffitiUploadActivity.class);
+                startActivity(i);
+                return;
+            }
+            case R.id.main_downloadMusic: {
+                Intent i = new Intent(this, MusicActivity.class);
                 startActivity(i);
                 return;
             }

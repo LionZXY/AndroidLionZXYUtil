@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 
 import com.lionzxy.firstandroidapp.app.R;
 import com.lionzxy.firstandroidapp.app.generateip.activitys.BaseActivity;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,6 +33,7 @@ public class VideoActivity extends BaseActivity implements View.OnClickListener,
     Button openVideo, copyLink, generate;
     LinearLayout videoFrame;
     List<String> links = new ArrayList<>();
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +46,7 @@ public class VideoActivity extends BaseActivity implements View.OnClickListener,
         generate = (Button) findViewById(R.id.button);
         videoFrame = (LinearLayout) findViewById(R.id.videoFrame);
         copyLink = (Button) findViewById(R.id.btn_copyLink);
-
+        imageView = (ImageView) findViewById(R.id.image);
         videoFrame.setVisibility(View.GONE);
 
         generate.setOnClickListener(this);
@@ -79,7 +82,7 @@ public class VideoActivity extends BaseActivity implements View.OnClickListener,
     }
 
     @Override
-    public void rVideo(final HashMap<Resolution, String> resolutions, final String title) {
+    public void rVideo(final HashMap<Resolution, String> resolutions, final String videoImgUrl, final String title) {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -94,6 +97,9 @@ public class VideoActivity extends BaseActivity implements View.OnClickListener,
                         links.add(resolutions.get(resolution));
                         resolutionsList.add(resolution.getName());
                     }
+
+                    if (videoImgUrl != null)
+                        Picasso.with(getBaseContext()).load(videoImgUrl).into(imageView);
 
                     videoFrame.setVisibility(View.VISIBLE);
 

@@ -19,6 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".vk.music.MusicActivity" />
         <activity android:name=".generateip.activitys.MyPreferenceActivity" />
         <activity android:name=".generateip.activitys.GenerateIpAcitivy" />
         <activity android:name=".vk.video.VideoActivity" />

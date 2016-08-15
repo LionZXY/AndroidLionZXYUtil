@@ -7,7 +7,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
-import android.widget.*;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import com.lionzxy.firstandroidapp.app.R;
 import com.lionzxy.firstandroidapp.app.generateip.brain.GenerateIP;
 import com.lionzxy.firstandroidapp.app.generateip.enums.GenerateIpStep;

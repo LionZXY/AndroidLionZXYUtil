@@ -5,17 +5,14 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.lionzxy.firstandroidapp.app.R;
 import com.lionzxy.firstandroidapp.app.generateip.activitys.BaseActivity;
-import com.lionzxy.firstandroidapp.app.helpers.LoginPasswordAuth;
 import com.lionzxy.firstandroidapp.app.helpers.MultipartUtility;
 import com.lionzxy.firstandroidapp.app.helpers.URIHelper;
 import com.lionzxy.firstandroidapp.app.vk.video.VKLoginActivity;
-import com.lionzxy.firstandroidapp.app.vk.video.VideoActivity;
 import com.lionzxy.firstandroidapp.app.vk.video.VkVideo;
 
 import org.json.JSONObject;

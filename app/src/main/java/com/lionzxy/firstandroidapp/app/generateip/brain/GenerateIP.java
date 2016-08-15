@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.widget.Toast;
+
 import com.lionzxy.firstandroidapp.app.generateip.activitys.GenerateIpAcitivy;
 import com.lionzxy.firstandroidapp.app.generateip.enums.GenerateIpStep;
 
@@ -36,7 +37,7 @@ public class GenerateIP implements Runnable {
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo.isConnected()) {
             generateIpAcitivy.step = GenerateIpStep.Generate;
-            int maxThread = generateIpAcitivy.getValue("maxThread",8);
+            int maxThread = generateIpAcitivy.getValue("maxThread", 8);
             for (int i = 0; i < maxThread; i++) {
                 new Thread(new GenerateIP()).start();
             }
@@ -53,7 +54,7 @@ public class GenerateIP implements Runnable {
                                 .openConnection());
                 urlc.setRequestProperty("User-Agent", "Android");
                 urlc.setRequestProperty("Connection", "close");
-                urlc.setConnectTimeout(generateIpAcitivy.getValue("timeout",1000));
+                urlc.setConnectTimeout(generateIpAcitivy.getValue("timeout", 1000));
                 urlc.connect();
                 ip = tempIp;
                 urlc.disconnect();

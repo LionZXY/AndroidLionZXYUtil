@@ -18,9 +18,10 @@ import java.util.Map;
  */
 public class VkVideo {
     static interface VKVideoR {
-        void rVideo(HashMap<Resolution, String> resolutions, String title);
+        void rVideo(HashMap<Resolution, String> resolutions, String videoUrlImage, String title);
     }
 
+    String videoUrlImage = null;
     String videoId;
 
     public VkVideo(String url, final VKVideoR vkVideoR, final String token) {
@@ -35,6 +36,7 @@ public class VkVideo {
                     JSONObject jsonObject = getAnswerWithThrow("video.get", params, token).getJSONObject("response").getJSONArray("items").getJSONObject(0);
                     String title = jsonObject.getString("title");
                     JSONObject files = jsonObject.getJSONObject("files");
+                    videoUrlImage = jsonObject.has("photo_320") ? jsonObject.getString("photo_320") : jsonObject.getString("photo_130");
                     Iterator<String> keys = files.keys();
 
                     HashMap<Resolution, String> resolutionStringHashMap = new HashMap<Resolution, String>();
@@ -43,18 +45,22 @@ public class VkVideo {
                         resolutionStringHashMap.put(Resolution.getResolution(key), files.getString(key));
                     }
 
-                    vkVideoR.rVideo(resolutionStringHashMap, title);
+                    vkVideoR.rVideo(resolutionStringHashMap, videoUrlImage, title);
                 } catch (Exception e) {
-                    vkVideoR.rVideo(null, e.getMessage());
+                    vkVideoR.rVideo(null, null, e.getMessage());
                 }
             }
         }).start();
     }
 
+    public String getVideoUrlImage() {
+        return videoUrlImage;
+    }
+
     public static JSONObject getAnswerWithThrow(String method, HashMap<String, String> params, String token) throws Exception {
         URL url;
 
-        url = new URL("https://api.vk.com/method/" + method + "?access_token=" + token + "&v=5.52");
+        url = new URL("https://api.vk.com/method/" + method + "?access_token=" + token + "&v=5.53");
 
 
         StringBuilder postData = new StringBuilder();
