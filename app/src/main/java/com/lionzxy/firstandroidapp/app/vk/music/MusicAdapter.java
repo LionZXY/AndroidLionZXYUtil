@@ -37,6 +37,12 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicViewHolder> {
         notifyItemInserted(musicObjects.size() - 1);
     }
 
+    public void clear() {
+        int size = musicObjects.size();
+        musicObjects.clear();
+        notifyItemRangeRemoved(0, size);
+    }
+
     @Override
     public int getItemCount() {
         return musicObjects.size();

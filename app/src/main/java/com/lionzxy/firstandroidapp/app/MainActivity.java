@@ -1,12 +1,14 @@
 package com.lionzxy.firstandroidapp.app;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import com.lionzxy.firstandroidapp.app.generateip.activitys.BaseActivity;
 import com.lionzxy.firstandroidapp.app.generateip.activitys.GenerateIpAcitivy;
+import com.lionzxy.firstandroidapp.app.helpers.DatabaseHelper;
 import com.lionzxy.firstandroidapp.app.vk.graffiti.GraffitiUploadActivity;
 import com.lionzxy.firstandroidapp.app.vk.music.MusicActivity;
 import com.lionzxy.firstandroidapp.app.vk.video.VideoActivity;
@@ -18,10 +20,14 @@ import com.lionzxy.firstandroidapp.app.vk.video.VideoActivity;
  * FirstAndroidApp
  */
 public class MainActivity extends BaseActivity implements View.OnClickListener {
+    public static DatabaseHelper mDatabaseHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.mine_layout);
+
+        mDatabaseHelper = new DatabaseHelper(this);
 
         ((Button) findViewById(R.id.main_generateIP)).setOnClickListener(this);
         ((Button) findViewById(R.id.main_generateLinkVK)).setOnClickListener(this);

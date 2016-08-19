@@ -1,10 +1,8 @@
 package com.lionzxy.firstandroidapp.app.vk.music;
 
-import android.app.NotificationManager;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.NotificationCompat;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
@@ -17,8 +15,9 @@ import java.util.ArrayList;
 
 import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
 
-public class MusicActivity extends BaseActivity {
+public class MusicActivity extends BaseActivity implements SwipeRefreshLayout.OnRefreshListener {
     private MusicAdapter adapter;
+    private SwipeRefreshLayout mSwipeRefreshLayout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -26,7 +25,8 @@ public class MusicActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.music_list);
 
-        this.startActivityForResult(new Intent(this, VKLoginActivity.class), 1);
+        mSwipeRefreshLayout = ((SwipeRefreshLayout) findViewById(R.id.swipeRefresh));
+        mSwipeRefreshLayout.setOnRefreshListener(this);
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setItemAnimator(new SlideInUpAnimator());
@@ -34,6 +34,7 @@ public class MusicActivity extends BaseActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(MusicActivity.this));
         recyclerView.setAdapter(adapter);
 
+        new MusicCachedDownloader(mSwipeRefreshLayout).execute(adapter);
     }
 
     @Override
@@ -42,11 +43,16 @@ public class MusicActivity extends BaseActivity {
             try {
                 final String token = data.getStringExtra("token");
 
-                new MusicDownloader(adapter, this).execute(token);
+                new MusicDownloader(adapter, this, mSwipeRefreshLayout).execute(token);
 
             } catch (Exception e) {
                 Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
             }
         }
+    }
+
+    @Override
+    public void onRefresh() {
+        this.startActivityForResult(new Intent(this, VKLoginActivity.class), 1);
     }
 }
